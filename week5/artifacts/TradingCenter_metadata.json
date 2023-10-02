@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.21+commit.d9974bed"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"week5/TradingCenter.sol": "TradingCenter"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"week5/TradingCenter.sol": {
+			"keccak256": "0xeebbfed15f674c984ce8f3abe216ae5b53e12256591f42a2127033487deb6024",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5e01fd7fa953f7240a0db361c214debb66093a99063534e3034b18135f57d694",
+				"dweb:/ipfs/QmR4zejXammgvRF1K8Ngas39qJvdcrWoNHZXG9i84r2W6w"
+			]
+		}
+	},
+	"version": 1
+}
