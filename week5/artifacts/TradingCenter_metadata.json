@@ -4,7 +4,63 @@
 	},
 	"language": "Solidity",
 	"output": {
-		"abi": [],
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "bcTokenAddress",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "deposit",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "exchange",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getDepositAmount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
 		"devdoc": {
 			"kind": "dev",
 			"methods": {},
@@ -33,11 +89,11 @@
 	},
 	"sources": {
 		"week5/TradingCenter.sol": {
-			"keccak256": "0xeebbfed15f674c984ce8f3abe216ae5b53e12256591f42a2127033487deb6024",
+			"keccak256": "0x4b29a2cf122a2236f2a3b15db5a0b68d5f274a6c899df612ae7215784ba23d47",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://5e01fd7fa953f7240a0db361c214debb66093a99063534e3034b18135f57d694",
-				"dweb:/ipfs/QmR4zejXammgvRF1K8Ngas39qJvdcrWoNHZXG9i84r2W6w"
+				"bzz-raw://cadb2d9a362c3651ed272dedf5138377fc59bcefd53f76225881e896b8e5bef2",
+				"dweb:/ipfs/QmeT3sMSjVM8b4vrMysAfCut7nVR4AgBLNG8xubwmuDrTC"
 			]
 		}
 	},

@@ -10,3 +10,11 @@ contract JimToken is ERC20 {
        // _mint(msg.sender, 100);
     }
 }
+
+contract BC is ERC20 {
+    constructor() ERC20("Jim Token", "BC") {
+        // 因為是算個數 但單位一樣適用wei eth 來計算，所以需要用挖的數量乘 10^18
+       _mint(msg.sender, 100 * 10 ** uint(decimals()));
+       // _mint(msg.sender, 100);
+    }
+}

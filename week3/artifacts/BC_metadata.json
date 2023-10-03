@@ -336,7 +336,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"week3/JimToken.sol": "JimToken"
+			"week3/JimToken.sol": "BC"
 		},
 		"evmVersion": "shanghai",
 		"libraries": {},
