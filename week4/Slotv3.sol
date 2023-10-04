@@ -2,12 +2,12 @@
 pragma solidity 0.8.21;
 
 contract TestSlot {
-
-   // 256 / 8 -> 32 -> 所以有64位。
-   // 128 / 8 -> 16
-   // address -> 20
-   // 要看上一個，剩餘的空間這一個能不能存。
-   // 還有offset。
+    // uint / 8 看看幾 byte
+    // 256 / 8 -> 32 -> 所以有64位。
+    // 128 / 8 -> 16
+    // address -> 20
+    // 要看上一個，剩餘的空間這一個能不能存。
+    // 還有offset。
     enum Case1 { ONE, TWO, THREE }
     enum Case2 { ONE, TWO, THREE, FOUR }
     enum Case3 { ONE, TWO, THREE, FOUR, onw, two, three,four }

@@ -211,11 +211,11 @@
 	},
 	"sources": {
 		"week4/Slotv3.sol": {
-			"keccak256": "0x66ee51ec299d5ad804b837789b286c5cd7c3ee127dee2d96cff437b2b4752bce",
+			"keccak256": "0xc19765f4f519a11ca2d158f6ecf8c020cf472ac369891776946c2739d36a4a6e",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://422a81678a9cfa7c146c99902ade90657c66e4f2ed1a64bb57fd2aa848bb6314",
-				"dweb:/ipfs/QmWuN837yCUXNdB4U2jqgmcVStoMk2QmkWKWQSQ7rihXuz"
+				"bzz-raw://fd270271670c2606f35583add2232d3d6bd967ae4e0587c7e57acd468d0b1fef",
+				"dweb:/ipfs/QmTGsf3z7iV6qAx7A7UYn4jKKooyvkejg6fQdoW9G2Ft9u"
 			]
 		}
 	},
