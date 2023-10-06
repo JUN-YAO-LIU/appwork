@@ -8,17 +8,22 @@ pragma solidity 0.8.21;
 
 contract TradingCenter{
 
+    mapping(address => uint256) private balanceOf;
+
     IERC20 immutable bcToken;
 
     constructor(address bcTokenAddress) {
         bcToken = IERC20(bcTokenAddress);
     }
 
+    
     function deposit(uint256 amount) external{
         require(amount <= bcToken.allowance(msg.sender,address(this)),"approving amount is too few.");
+        balanceOf[msg.sender] += amount;
         bcToken.transferFrom(msg.sender,address(this),amount);
     }
 
+    // 可以JT兌換BC
     function exchange(address token, uint256 amount) external{
         IERC20 swapToken= IERC20(token);
         require(amount <= swapToken.allowance(msg.sender,address(this)),"approving amount is too few.");
@@ -27,8 +32,9 @@ contract TradingCenter{
         bcToken.transfer(msg.sender,amount);
     }
 
+    // deposite bc 有多少，就算被換掉還是會紀錄原本數量。
     function getDepositAmount() external view returns (uint256){
-        return bcToken.balanceOf(msg.sender);
+        return balanceOf[msg.sender];
     }
 }
 

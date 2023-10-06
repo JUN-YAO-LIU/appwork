@@ -107,6 +107,49 @@
 				"type": "function"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "encodeCall",
+				"outputs": [
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "s",
+						"type": "string"
+					}
+				],
+				"name": "encodeFunSelector",
+				"outputs": [
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "encodeOne",
 				"outputs": [
@@ -135,6 +178,88 @@
 			{
 				"inputs": [],
 				"name": "encodePackedAppworksV2",
+				"outputs": [
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "encodeWithSelector",
+				"outputs": [
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "encodeWithSignature",
+				"outputs": [
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bool",
+						"name": "b",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "arrUint",
+						"type": "uint256[]"
+					},
+					{
+						"internalType": "address",
+						"name": "a",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "array",
+						"type": "string"
+					}
+				],
+				"name": "encodeWithSignatureAppWorks",
 				"outputs": [
 					{
 						"internalType": "bytes",
@@ -203,11 +328,11 @@
 	},
 	"sources": {
 		"week5/testABIEncode.sol": {
-			"keccak256": "0xb94d24e99e8dc5a2196c9a523f0dc37f022417c79418fa9700fc6f519da40b1e",
+			"keccak256": "0xd9022b29558d8d92c346c71cf5b5542a8a50842b105d5f0f698ef653b2263596",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://7538a2aa043504dd62929ee13772cb5a7238252f39edc7c82f4183c98b4f4ccf",
-				"dweb:/ipfs/QmWrjUYJQ1kvLthCEqsWREryTAJcZ7m5YVgePGkxmfMqsH"
+				"bzz-raw://f1ec2fae90986a240c2d3cf0dfaf11699f138644d8e43bd1562a059435504d4b",
+				"dweb:/ipfs/QmQ2KyjsiAy7Z6rPPp5dCJvfbuXpdbWk83Fcs9xLzLK7bD"
 			]
 		}
 	},

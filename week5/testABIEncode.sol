@@ -47,13 +47,77 @@ contract TestEncode {
     function AppWorks(bool b,uint256[] calldata arrUint,address a,string calldata array) external {
     }
 
+    function encodeWithSignature(
+        address to,
+        uint amount
+    ) external pure returns (bytes memory) {
+        // Typo is not checked - "transfer(address, uint)"
+        return abi.encodeWithSignature("transfer(address,uint256)", to, amount);
+    }
+
+    function encodeWithSelector(
+        address to,
+        uint amount
+    ) external pure returns (bytes memory) {
+        // Type is not checked - (IERC20.transfer.selector, true, amount)
+        return abi.encodeWithSelector(IERC20.transfer.selector, to, amount);
+    }
+
+    function encodeCall(address to, uint amount) external pure returns (bytes memory) {
+        // Typo and type errors will not compile
+        return abi.encodeCall(IERC20.transfer, (to, amount));
+    }
+
+    // true [9,18],0x2Ff1F4e5D08a822743ec6b342c521A0a421456cb,Brian
     function encodeAppWorks(
       bool b,
       uint256[] calldata arrUint,
       address a,
       string calldata array) 
       external pure returns (bytes memory) {
-        return abi.encodeWithSignature("AppWorks(bool,uint256[],address,string)", true, arrUint,a,array);
+        return abi.encode("AppWorks(bool,uint256[],address,string)", b, arrUint,a,array);
+        // encodeWithSignature
     }
+
+    function encodeWithSignatureAppWorks(
+      bool b,
+      uint256[] calldata arrUint,
+      address a,
+      string calldata array) 
+      external pure returns (bytes memory) {
+        return abi.encodeWithSignature("AppWorks(bool,uint256[],address,string)", b, arrUint,a,array);
+    }
+
+     function encodeFunSelector(string memory s) external pure returns (bytes memory) {
+      return abi.encodeWithSignature(s);
+    }
+
+  //  function watch_tg_invmru_119a5a98(address,uint256,uint256)public{}
+
+  //  function passphrase_calculate_transfer(uint64,address)public{}
+
+  //  function branch_passphrase_public(uint256,bytes8) public{}
+}
+
+
+interface IERC20 {
+    function totalSupply() external view returns (uint);
+
+    function balanceOf(address account) external view returns (uint);
+
+    function transfer(address recipient, uint amount) external returns (bool);
+
+    function allowance(address owner, address spender) external view returns (uint);
+
+    function approve(address spender, uint amount) external returns (bool);
+
+    function transferFrom(
+        address sender,
+        address recipient,
+        uint amount
+    ) external returns (bool);
+
+    event Transfer(address indexed from, address indexed to, uint value);
+    event Approval(address indexed owner, address indexed spender, uint value);
 }
 
