@@ -26,6 +26,7 @@ contract TestSlot {
     Case2   public case2;
     Case3   public case3;
 
+    // 2 ^ 8 - 1 
     constructor(uint256 _number1 , uint128 _number2, uint8 _number4){
         number1 = _number1;
         number2 = _number2;

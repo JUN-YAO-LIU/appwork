@@ -9,6 +9,23 @@ curl -X POST \
   --data '{"jsonrpc":"2.0","method":"eth_getStorageAt","params":["0x908E7E72D3240d1C747486980B58190f6A5d2a3b", "0x1", "latest"],"id":1}' \
 https://rpc.ankr.com/eth_sepolia
 
+// Jim slot contract
+curl -X POST \
+  -H "Content-Type: application/json" \
+  --data '{"jsonrpc":"2.0","method":"eth_getStorageAt","params":["0x490215eFbfc220EDd55757b6Ab45fB11e2268C60", "0x1", "latest"],"id":1}' \
+https://rpc.ankr.com/eth_sepolia
+
+0000003078303800000000 -> 11 bytes -> 0x08  -> offset 21，前面補0是因為是8 bytes，所以剩下的11bytes也只會用8。
+ff -> uint8 -> 1 bytes  -> offset 20 前面存多少了要跳過
+c8bd59d60961bedb12c95079250d3075b9328a2d -> address 20 bytes -> offset 0
+
+307831320000000000000000 -> bytes12("0x12") -> 有12個bytes
+c8bd59d60961bedb12c95079250d3075b9328a2d
+
+每個字串會是兩byte
+3078333200000000000000000000000000000000000000000000000000000000 -> bytes32("0x32")
+
+
 {
 	"storage": [
 		{

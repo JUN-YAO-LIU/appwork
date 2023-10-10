@@ -1,11 +1,6 @@
 // SPDX-License-Identifier:MIT
 pragma solidity 0.8.21;
 
-// import "https://gist.github.com/d49976110/ea6645a8977e4d25eda7474446296df1";
-// import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
-
-// 通常支援幣種我看都是寫死在合約裡，有動態的做法？
-
 contract TradingCenter{
 
     mapping(address => uint256) private balanceOf;
@@ -18,16 +13,15 @@ contract TradingCenter{
 
     
     function deposit(uint256 amount) external{
-        require(amount <= bcToken.allowance(msg.sender,address(this)),"approving amount is too few.");
+        require(amount <= bcToken.allowance(msg.sender,address(this)),"bc Token approving amount isn't enough.");
         balanceOf[msg.sender] += amount;
         bcToken.transferFrom(msg.sender,address(this),amount);
     }
 
-    // 可以JT兌換BC
     function exchange(address token, uint256 amount) external{
         IERC20 swapToken= IERC20(token);
-        require(amount <= swapToken.allowance(msg.sender,address(this)),"approving amount is too few.");
-        require(amount <= bcToken.balanceOf(msg.sender),"TradingCenter isn't enough.");
+        require(amount <= swapToken.allowance(msg.sender,address(this)),"Jim wETH approving amount isn't enough.");
+        require(amount <= bcToken.balanceOf(msg.sender),"TradingCenter's bc token amount isn't enough.");
         swapToken.transferFrom(msg.sender,address(this),amount);
         bcToken.transfer(msg.sender,amount);
     }

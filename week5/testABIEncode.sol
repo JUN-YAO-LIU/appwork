@@ -44,9 +44,6 @@ contract TestEncode {
       (arr,u,a) = abi.decode(data, (string,uint256,address));
     }
 
-    function AppWorks(bool b,uint256[] calldata arrUint,address a,string calldata array) external {
-    }
-
     function encodeWithSignature(
         address to,
         uint amount
@@ -69,17 +66,7 @@ contract TestEncode {
     }
 
     // true [9,18],0x2Ff1F4e5D08a822743ec6b342c521A0a421456cb,Brian
-    function encodeAppWorks(
-      bool b,
-      uint256[] calldata arrUint,
-      address a,
-      string calldata array) 
-      external pure returns (bytes memory) {
-        return abi.encode("AppWorks(bool,uint256[],address,string)", b, arrUint,a,array);
-        // encodeWithSignature
-    }
-
-    function encodeWithSignatureAppWorks(
+     function encodeWithSignatureAppWorks(
       bool b,
       uint256[] calldata arrUint,
       address a,
@@ -88,9 +75,35 @@ contract TestEncode {
         return abi.encodeWithSignature("AppWorks(bool,uint256[],address,string)", b, arrUint,a,array);
     }
 
+     function AppWorks(
+      bool b,
+      uint256[] calldata arrUint,
+      address a,
+      string calldata array) 
+      external pure returns(bool){
+        require(b,"bool parameter correct.");
+        require(arrUint[0] == 9,"uint array parameter correct.");
+        require(arrUint[1] == 18,"uint array parameter correct.");
+        require(a == 0x2Ff1F4e5D08a822743ec6b342c521A0a421456cb,"address parameter correct.");
+        require(keccak256(abi.encodePacked((array))) == keccak256(abi.encodePacked(("Brian"))),"string parameter correct.");
+
+        return true;
+    }
+
+   
+
+    function encodeWithSignatureSchool() 
+      external pure returns (bytes memory) {
+        return abi.encodeWithSignature("School(string[])", ["11","2","3"]);
+    }
+
      function encodeFunSelector(string memory s) external pure returns (bytes memory) {
       return abi.encodeWithSignature(s);
     }
+
+    fallback() external payable {
+    }
+
 
   //  function watch_tg_invmru_119a5a98(address,uint256,uint256)public{}
 

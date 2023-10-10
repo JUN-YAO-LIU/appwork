@@ -89,11 +89,11 @@
 	},
 	"sources": {
 		"week5/TradingCenter.sol": {
-			"keccak256": "0xe125fe83ed470b9ea9fe43e7141236b290c137e22d8dd8b1fc3b7360551fd865",
+			"keccak256": "0xaa267528062c5f60d310566c49fa9418376dac1732ff183a2da3b3a43432f659",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://4bf6deae03ad187cde4ebaaccb580e5d53ced0e7954864494a9549a7272ab1ea",
-				"dweb:/ipfs/QmZwa3bqvP2XrfrqRkk4XVUB2tScYoxnJr9daPYeoGAXH9"
+				"bzz-raw://68fc38529a65a30237886d6d0913adc87dcf1bffa372060112915479fe737f91",
+				"dweb:/ipfs/QmXMvWhkGF9Ay2eiZ4ThFhkC5aas2YHdMUK1JnjPoAZ6VZ"
 			]
 		}
 	},
