@@ -202,7 +202,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"week5/TradingCenter.sol": "IERC20"
+			"week5/testABIEncode.sol": "IERC20"
 		},
 		"evmVersion": "shanghai",
 		"libraries": {},
@@ -216,12 +216,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"week5/TradingCenter.sol": {
-			"keccak256": "0xaa267528062c5f60d310566c49fa9418376dac1732ff183a2da3b3a43432f659",
+		"week5/testABIEncode.sol": {
+			"keccak256": "0x9649e468cc23c278fcd7e408cec863250dd4c5ac66c2a62c795c0083980b9319",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://68fc38529a65a30237886d6d0913adc87dcf1bffa372060112915479fe737f91",
-				"dweb:/ipfs/QmXMvWhkGF9Ay2eiZ4ThFhkC5aas2YHdMUK1JnjPoAZ6VZ"
+				"bzz-raw://9a237aa2f149a1b97ce783004c04581ccec10218ada5555487adafcee1b9a4b0",
+				"dweb:/ipfs/QmUABA4rPpgPqPqvZoTckyTuFKBaScy3oAWrTkR7KJUAFW"
 			]
 		}
 	},

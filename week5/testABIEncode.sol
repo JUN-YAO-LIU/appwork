@@ -3,6 +3,8 @@ pragma solidity 0.8.21;
 
 contract TestEncode {
 
+    // uint external a = 0;
+
     function encode() external pure returns (bytes memory) {
       return abi.encode("appworks",1,0x2Ff1F4e5D08a822743ec6b342c521A0a421456cb);
     }
