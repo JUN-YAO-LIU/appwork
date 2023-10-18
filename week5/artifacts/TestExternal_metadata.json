@@ -19,21 +19,8 @@
 			{
 				"inputs": [
 					{
-						"internalType": "uint256",
-						"name": "amount",
-						"type": "uint256"
-					}
-				],
-				"name": "deposit",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
 						"internalType": "address",
-						"name": "token",
+						"name": "to",
 						"type": "address"
 					},
 					{
@@ -42,22 +29,59 @@
 						"type": "uint256"
 					}
 				],
-				"name": "exchange",
+				"name": "encodeWithSignature",
+				"outputs": [
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "sender",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "m",
+						"type": "uint256"
+					}
+				],
+				"name": "testCallExternal",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "getDepositAmount",
-				"outputs": [
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "bcTokenAddress",
+						"type": "address"
+					},
 					{
 						"internalType": "uint256",
-						"name": "",
+						"name": "m",
 						"type": "uint256"
 					}
 				],
-				"stateMutability": "view",
+				"name": "testCallExternalSelf",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			}
 		],
@@ -74,7 +98,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"week5/TradingCenter.sol": "TradingCenter"
+			"week5/TestExternal.sol": "TestExternal"
 		},
 		"evmVersion": "shanghai",
 		"libraries": {},
@@ -88,12 +112,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"week5/TradingCenter.sol": {
-			"keccak256": "0xaa267528062c5f60d310566c49fa9418376dac1732ff183a2da3b3a43432f659",
+		"week5/TestExternal.sol": {
+			"keccak256": "0x50ca01b787c47ac6f2ecce7e28306d655d59d5759c2345b213cf42441ee0bac9",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://68fc38529a65a30237886d6d0913adc87dcf1bffa372060112915479fe737f91",
-				"dweb:/ipfs/QmXMvWhkGF9Ay2eiZ4ThFhkC5aas2YHdMUK1JnjPoAZ6VZ"
+				"bzz-raw://c3dc9ac54f6982a2abb45b4de0eabe5bb9e0e81eebe2c2d8cba6a993622edef1",
+				"dweb:/ipfs/QmaDxMbS1UkfyyRdfYCMuRqaTmaKhEYucVWkrHeKK1un1u"
 			]
 		}
 	},

@@ -10,4 +10,175 @@ curl -X POST \
 https://rpc.ankr.com/eth_sepolia
 
 
-a
+// Jim slot contract
+curl -X POST \
+  -H "Content-Type: application/json" \
+  --data '{"jsonrpc":"2.0","method":"eth_getStorageAt","params":["0x490215eFbfc220EDd55757b6Ab45fB11e2268C60", "0x1", "latest"],"id":1}' \
+https://rpc.ankr.com/eth_sepolia
+
+0000003078303800000000 -> 11 bytes -> 0x08  -> offset 21，前面補0是因為是8 bytes，所以剩下的11bytes也只會用8。
+ff -> uint8 -> 1 bytes  -> offset 20 前面存多少了要跳過
+c8bd59d60961bedb12c95079250d3075b9328a2d -> address 20 bytes -> offset 0
+
+307831320000000000000000 -> bytes12("0x12") -> 有12個bytes
+c8bd59d60961bedb12c95079250d3075b9328a2d
+
+每個字串會是兩byte
+3078333200000000000000000000000000000000000000000000000000000000 -> bytes32("0x32")
+
+
+{
+	"storage": [
+		{
+			"astId": 21,
+			"contract": "week4/Slotv3.sol:TestSlot",
+			"label": "number1",
+			"offset": 0,
+			"slot": "0",
+			"type": "t_uint256"
+		},
+		{
+			"astId": 23,
+			"contract": "week4/Slotv3.sol:TestSlot",
+			"label": "number2",
+			"offset": 0,
+			"slot": "1",
+			"type": "t_uint128"
+		},
+		{
+			"astId": 28,
+			"contract": "week4/Slotv3.sol:TestSlot",
+			"label": "owner",
+			"offset": 0,
+			"slot": "2",
+			"type": "t_address"
+		},
+		{
+			"astId": 30,
+			"contract": "week4/Slotv3.sol:TestSlot",
+			"label": "number4",
+			"offset": 20,
+			"slot": "2",
+			"type": "t_uint8"
+		},
+		{
+			"astId": 36,
+			"contract": "week4/Slotv3.sol:TestSlot",
+			"label": "b8",
+			"offset": 21,
+			"slot": "2",
+			"type": "t_bytes8"
+		},
+		{
+			"astId": 38,
+			"contract": "week4/Slotv3.sol:TestSlot",
+			"label": "sender",
+			"offset": 0,
+			"slot": "3",
+			"type": "t_address"
+		},
+		{
+			"astId": 44,
+			"contract": "week4/Slotv3.sol:TestSlot",
+			"label": "b12",
+			"offset": 20,
+			"slot": "3",
+			"type": "t_bytes12"
+		},
+		{
+			"astId": 50,
+			"contract": "week4/Slotv3.sol:TestSlot",
+			"label": "b32",
+			"offset": 0,
+			"slot": "4",
+			"type": "t_bytes32"
+		},
+		{
+			"astId": 53,
+			"contract": "week4/Slotv3.sol:TestSlot",
+			"label": "case1",
+			"offset": 0,
+			"slot": "5",
+			"type": "t_enum(Case1)5"
+		},
+		{
+			"astId": 56,
+			"contract": "week4/Slotv3.sol:TestSlot",
+			"label": "case2",
+			"offset": 1,
+			"slot": "5",
+			"type": "t_enum(Case2)10"
+		},
+		{
+			"astId": 59,
+			"contract": "week4/Slotv3.sol:TestSlot",
+			"label": "case3",
+			"offset": 2,
+			"slot": "5",
+			"type": "t_enum(Case3)19"
+		}
+	],
+	"types": {
+		"t_address": {
+			"encoding": "inplace",
+			"label": "address",
+			"numberOfBytes": "20"
+		},
+		"t_bytes12": {
+			"encoding": "inplace",
+			"label": "bytes12",
+			"numberOfBytes": "12"
+		},
+		"t_bytes32": {
+			"encoding": "inplace",
+			"label": "bytes32",
+			"numberOfBytes": "32"
+		},
+		"t_bytes8": {
+			"encoding": "inplace",
+			"label": "bytes8",
+			"numberOfBytes": "8"
+		},
+		"t_enum(Case1)5": {
+			"encoding": "inplace",
+			"label": "enum TestSlot.Case1",
+			"numberOfBytes": "1"
+		},
+		"t_enum(Case2)10": {
+			"encoding": "inplace",
+			"label": "enum TestSlot.Case2",
+			"numberOfBytes": "1"
+		},
+		"t_enum(Case3)19": {
+			"encoding": "inplace",
+			"label": "enum TestSlot.Case3",
+			"numberOfBytes": "1"
+		},
+		"t_uint128": {
+			"encoding": "inplace",
+			"label": "uint128",
+			"numberOfBytes": "16"
+		},
+		"t_uint256": {
+			"encoding": "inplace",
+			"label": "uint256",
+			"numberOfBytes": "32"
+		},
+		"t_uint8": {
+			"encoding": "inplace",
+			"label": "uint8",
+			"numberOfBytes": "1"
+		}
+	}
+}
+
+0xae53a4a5 -> function selector
+0000000000000000000000000000000000000000000000000000000000000001 - [0] -> true
+0000000000000000000000000000000000000000000000000000000000000080 - [1] -> 紀錄uint256陣列的起始位置，也就是[4]第四個32bytes的地方開始
+0000000000000000000000002ff1f4e5d08a822743ec6b342c521a0a421456cb - [2] -> 地址
+00000000000000000000000000000000000000000000000000000000000000e0 - [3] -> 紀錄字串的起始位置，也就是[7]第七個32bytes的地方開始
+0000000000000000000000000000000000000000000000000000000000000002 - [4] -> 紀錄uint256陣列要往下讀取幾個陣列的值
+0000000000000000000000000000000000000000000000000000000000000009 - [5] -> 讀取陣列第一個值
+0000000000000000000000000000000000000000000000000000000000000012 - [6] -> 讀取陣列第二個值
+0000000000000000000000000000000000000000000000000000000000000005 - [7] -> 紀錄字串要往下讀取幾個byte
+427269616e000000000000000000000000000000000000000000000000000000 - [8] -> 要讀取五個byte

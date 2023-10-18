@@ -38,6 +38,8 @@ contract Fallback{
 }
 
 contract TestFallbackAndRecieve {
+
+    bytes public b;
     function transferToFallback(address payable _to) public payable {
         _to.transfer(msg.value);
     }
@@ -49,6 +51,7 @@ contract TestFallbackAndRecieve {
 
     function callDataTest(address to) external {
         bytes memory selector = abi.encodeWithSignature("testCalldata()");
+        b = selector;
         (bool success, ) = to.call(selector);
         require(success);
     }

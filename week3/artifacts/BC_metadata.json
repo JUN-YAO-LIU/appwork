@@ -383,11 +383,11 @@
 			]
 		},
 		"week3/JimToken.sol": {
-			"keccak256": "0x4a54f8de0122ce282f75502fd8851acab747c803e2879fbeb91276e0b091d6b6",
+			"keccak256": "0x21207f71726fb9d09bdce899d35c4ec19ef1349d68f8aaded4db6beb75befd73",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://edfa4ffccaa17864ca9601232efc8ec46dd377fa03909af6d73c61a54ea149bb",
-				"dweb:/ipfs/QmPHfaAGoXExQXyMKLy76754prxm92TGwaK6Zg9Nn5BUop"
+				"bzz-raw://1bbfc7805ab89204d28218b4822153c7d9bd3082d25388d3dffced873e530e4a",
+				"dweb:/ipfs/QmZs8QFMtHhaU7qBD8tMBWbSdxuFi3F6bmjTZtoiZZKKd4"
 			]
 		}
 	},

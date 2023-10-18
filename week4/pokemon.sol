@@ -11,6 +11,7 @@ contract Pokemon {
 
     // Pok[] public poks;
     mapping(address => mapping(uint =>Pok)) public ownerPoks;
+    mapping(address => Pok[]) public ownerPoks;
     mapping(address => uint) public ownerPokcount;
 
     function list()external view returns(Pok[] memory){
