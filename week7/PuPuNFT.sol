@@ -11,7 +11,7 @@ contract PuPuERC721 is ERC721 {
     using Counters for Counters.Counter;
     Counters.Counter private _tokenIds;
 
-    string constant public baseUri = '{image:"https://imgur.com/IBDi02f"}';
+    string constant public baseUri = "https://ipfs.io/ipfs/QmQPo3uA5SHACurUjnw2YmZdijnvB1j4iwkL9b3TffZvan/ppu0.json";
 
     // 1.create a ERC721 token with name and sybmol.
     constructor() ERC721("Don't send NFT to me", "NONFT") {}
@@ -29,7 +29,6 @@ contract PuPuERC721 is ERC721 {
         return baseUri;
     }
 }
-
 
 contract ReturnPuPuERC721 is IERC721Receiver,PuPuERC721 {
 

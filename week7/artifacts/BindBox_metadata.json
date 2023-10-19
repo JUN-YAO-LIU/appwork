@@ -366,6 +366,19 @@
 				"type": "function"
 			},
 			{
+				"inputs": [],
+				"name": "reveal",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "address",
@@ -430,6 +443,19 @@
 					}
 				],
 				"name": "setApprovalForAll",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bool",
+						"name": "b",
+						"type": "bool"
+					}
+				],
+				"name": "setReveal",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -806,11 +832,11 @@
 			]
 		},
 		"week7/BindBox.sol": {
-			"keccak256": "0x0f788466248913aecfbfc50a7cd1c92b1894d1d1f16777fc5863b2c6bad39bb3",
+			"keccak256": "0xf243b198af794a3f89a379cc045f43c98b5462e5c8df5ff900fe702ab8633a4a",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://82dfb2c54ff8791e84f2ecadd80454f042fa7772eb0d3ac79d05a8b0fbf80acb",
-				"dweb:/ipfs/QmeoFB7BbpmXBjYA9AGq7CYaQo3U1Tss1Ekpy7YBgMjc48"
+				"bzz-raw://c53828130cc03034e534f8e60f4b9869cae1c01118eff00f3a35afe7fcf90717",
+				"dweb:/ipfs/QmTRMVPjr8P3YWn4sRvxL7Ce4gbai8cXwGM3rcnzWWYXqh"
 			]
 		},
 		"week7/VRFv2Consumer.sol": {
