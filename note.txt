@@ -28,7 +28,6 @@ c8bd59d60961bedb12c95079250d3075b9328a2d
 
 123
 asdf
-jim
 
 {
 	"storage": [
