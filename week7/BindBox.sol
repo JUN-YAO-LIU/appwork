@@ -23,6 +23,14 @@ Implement 盲盒機制
 */
 
 
+// chainlinke 合約部署
+// chainlink 上註冊服務
+// 部署nft owner把合約傳給 nft
+// owner 錢傳給 nft
+// nft approve chainlink transfer
+// 可以進行mint
+
+
 contract BindBox is ERC721 {
     using Counters for Counters.Counter;
     Counters.Counter private _tokenIds;
@@ -52,7 +60,7 @@ contract BindBox is ERC721 {
 
     function tokenURI(uint256 tokenId) public view override returns (string memory) {
         _requireOwned(tokenId);
-        return reveal ? string(abi.encodePacked(baseUri, tokenId, ".json")) : blockUrl;
+        return reveal ? string(abi.encodePacked(baseUri, string(abi.encode(tokenId)),".json")) : blockUrl;
     }
 
     function pushArr(uint n) private returns(uint){
@@ -78,8 +86,14 @@ contract BindBox is ERC721 {
         return pushArr(t % totalSupply);
     }
 
+    function approveVRFv2()external{
+        _oracle.acceptOwnership();
+    }
+
     function setReveal(bool b) external {
         reveal = b;
     }
+
+    receive() external payable {}
 
 }

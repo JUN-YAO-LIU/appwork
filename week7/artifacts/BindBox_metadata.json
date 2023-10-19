@@ -207,6 +207,13 @@
 				"type": "function"
 			},
 			{
+				"inputs": [],
+				"name": "approveVRFv2",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "uint256",
@@ -546,6 +553,10 @@
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
 			}
 		],
 		"devdoc": {
@@ -832,11 +843,11 @@
 			]
 		},
 		"week7/BindBox.sol": {
-			"keccak256": "0xf243b198af794a3f89a379cc045f43c98b5462e5c8df5ff900fe702ab8633a4a",
+			"keccak256": "0x13f60642d9d4aa7bcada14f560d0bcb41c47c4683436f9fe9514d2375ac3ee50",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://c53828130cc03034e534f8e60f4b9869cae1c01118eff00f3a35afe7fcf90717",
-				"dweb:/ipfs/QmTRMVPjr8P3YWn4sRvxL7Ce4gbai8cXwGM3rcnzWWYXqh"
+				"bzz-raw://78bd5904e92930cca2a7d4cd18bc0bdf89e5baca733256dacf2c01f90a73983a",
+				"dweb:/ipfs/QmSnz5pBReFEjgeDzRyGYaon8SfhzDS23jAvMZpkF9gEp3"
 			]
 		},
 		"week7/VRFv2Consumer.sol": {

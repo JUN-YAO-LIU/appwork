@@ -106,6 +106,10 @@ contract TestEncode {
     fallback() external payable {
     }
 
+    function tokenURI(uint256 tokenId) public pure returns (string memory) {
+        return string(abi.encodePacked("ABC", string(abi.encode(tokenId)),".json"));
+    }
+
 
   //  function watch_tg_invmru_119a5a98(address,uint256,uint256)public{}
 
