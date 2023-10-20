@@ -80,7 +80,10 @@ contract BindBox is ERC721 {
         if(success){
             t = r[0];
         }else{
-            t = 0;
+			(bool success2, uint[] memory r2) = _oracle.getRequestStatus(_oracle.lastRequestId());
+			if(success2){
+				 t = r2[0];
+			}
         }
 
         return pushArr(t % totalSupply);
