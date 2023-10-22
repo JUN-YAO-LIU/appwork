@@ -6,7 +6,13 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_chainlink",
+						"type": "address"
+					}
+				],
 				"stateMutability": "nonpayable",
 				"type": "constructor"
 			},
@@ -336,7 +342,13 @@
 			{
 				"inputs": [],
 				"name": "mint",
-				"outputs": [],
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			},
@@ -794,14 +806,6 @@
 				"dweb:/ipfs/QmNgFkoXNWoUbAyw71rr1sKQ95Rj2GfvYiWg79xEYDn2NY"
 			]
 		},
-		"@openzeppelin/contracts/utils/Counters.sol": {
-			"keccak256": "0xf0018c2440fbe238dd3a8732fa8e17a0f9dce84d31451dc8a32f6d62b349c9f1",
-			"license": "MIT",
-			"urls": [
-				"bzz-raw://59e1c62884d55b70f3ae5432b44bb3166ad71ae3acd19c57ab6ddc3c87c325ee",
-				"dweb:/ipfs/QmezuXg5GK5oeA4F91EZhozBFekhq5TD966bHPH18cCqhu"
-			]
-		},
 		"@openzeppelin/contracts/utils/Strings.sol": {
 			"keccak256": "0x55f102ea785d8399c0e58d1108e2d289506dde18abc6db1b7f68c1f9f9bc5792",
 			"license": "MIT",
@@ -843,11 +847,11 @@
 			]
 		},
 		"week7/BindBox.sol": {
-			"keccak256": "0x13f60642d9d4aa7bcada14f560d0bcb41c47c4683436f9fe9514d2375ac3ee50",
+			"keccak256": "0x3b9d85097ab89d5ba7c21ab299c43be46051c5056820ab4ed9a879f5d040cdc3",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://78bd5904e92930cca2a7d4cd18bc0bdf89e5baca733256dacf2c01f90a73983a",
-				"dweb:/ipfs/QmSnz5pBReFEjgeDzRyGYaon8SfhzDS23jAvMZpkF9gEp3"
+				"bzz-raw://60ba1a7a9d71a07a04dba01765c68dd4dfbc40225bb9a1b7a5fb52d043cb8c7a",
+				"dweb:/ipfs/QmPS94SwYTFzXydLGGvN85owDvGtLVYduUXqsKkaA6Kmrp"
 			]
 		},
 		"week7/VRFv2Consumer.sol": {

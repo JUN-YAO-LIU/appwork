@@ -1,6 +1,8 @@
 // SPDX-License-Identifier:MIT
 pragma solidity 0.8.21;
 
+import "@openzeppelin/contracts/utils/Strings.sol";
+
 contract TestEncode {
 
     // uint external a = 0;
@@ -107,7 +109,7 @@ contract TestEncode {
     }
 
     function tokenURI(uint256 tokenId) public pure returns (string memory) {
-        return string(abi.encodePacked("ABC", string(abi.encode(tokenId)),".json"));
+        return string(abi.encodePacked("ABC", Strings.toString(tokenId),".json"));
     }
 
 

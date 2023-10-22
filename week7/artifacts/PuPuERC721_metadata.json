@@ -714,11 +714,11 @@
 			]
 		},
 		"week7/PuPuNFT.sol": {
-			"keccak256": "0xb5f36789c8a4dc28c5882d3cb6d07b1b3d009f09f4597458ab535fd373a6403f",
+			"keccak256": "0xc6f62956a510f5e49c256422f2c90aa364e96f2d93f30393addba1dd269fc39c",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://afa11820b5420b564faa75e15f386f1b348982f0704c7ec376b0cb71c2af060f",
-				"dweb:/ipfs/Qmednty8m5kxVLRsKp2W9bPv5yB9WzW5oppJPRNeSdWFLk"
+				"bzz-raw://1e3866595210234d49c4e436ae142076c57c0e577043467927bee600b0c7f27c",
+				"dweb:/ipfs/Qmdin4FnTpPHCtqs5Sv3yzPZ2PoZVa8ksiqbaW1TiKVHpE"
 			]
 		}
 	},
